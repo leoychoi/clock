@@ -1,6 +1,6 @@
 Now now;
 ArrayList<Second> seconds;
-int numSeconds = 200;
+int numSeconds = 1;
 float rectWidth = 5;
 float secondsHeight = 60;
 float framerate = 60;
@@ -11,16 +11,14 @@ void setup() {
   background(255);
   now = new Now(width*.20, -1, rectWidth, height+1);
   seconds = new ArrayList<Second>();
-  for (int i = 0; i < numSeconds; i++) {                                                                              
+  for (int i = 0; i < numSeconds; i++) {
     seconds.add(new Second(float(i) * (float(width)/float(numSeconds)), (height/2) - (secondsHeight/2), rectWidth, secondsHeight));
   }
-}                             
-                                                                            void draw() {                                                                                                                                                                                                                                                                                                       
+}
+void draw() {
   background(255);
-  now.render();                                                             
-  for (int i = 0; i < numSeconds; i++) {                   
+  now.render();
+  for (int i = 0; i < numSeconds; i++) {
     seconds.get(i).render();
   }
-
-}                  
-                                                                                                                                               
+}
